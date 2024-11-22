@@ -1,0 +1,260 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS file -->
+    <link rel="stylesheet" href="{% static 'about/css/style.css' %}">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'about/images/eden.jpg' %}" type="image/x-icon">
+
+    <!-- Fontawesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Eden Beryl S
+    </title>
+</head>
+
+<body>
+    <!-- Website Layout -->
+    <div class="website_container">
+
+        <!-- Global Menu -->
+        <div id="global_menu_button_container">
+            <p class="site_title">Surya M</p>
+            <i class="fa fa-bars" id="global_menu_button"></i>
+        </div>
+
+        <ul id="global_menu_items">
+            <div>
+                <i class="fa fa-close" id="global_menu_close_button"></i>
+                <li><a href="/"><i class="fa fa-home"></i> About</a></li>
+                <li><a href="resume.html"><i class="fas fa-file-alt"></i> Resume</a></li>
+                <li><a href="blogs.html"><i class="fas fa-pen-nib"></i> Blogs</a></li>
+                <li><a href="Projects.html"><i class="fas fa-cog"></i> Projects</a></li>
+                <li><a href="contact.html"><i class="fas fa-phone-square"></i> Contact</a></li>
+            </div>
+        </ul>
+
+        <!--x Global Menu x-->
+
+        <!-- sidebar -->
+        <div class="sidebar_container">
+            <div class="image">
+                <img src="{% static 'about/images/eden.jpg' %}" alt="Surya">
+                <div class="right_image_box"></div>
+                <div class="left_image_box"></div>
+            </div>
+            <!-- sidebar Content -->
+            <div class="sidebar_content">
+                <!-- Long name can be applied so easily -->
+                <h1>Eden Beryl S</h1>
+                <p>Big Data Engineer</p>
+                <!-- Social Medias -->
+                <div class="social_media">
+                    <a href="https://github.com/SURYAMurugan2211"><i class="fab fa-github"></i></a>
+                    <a href="https://leetcode.com/u/Surya-M" ><i class="fab fa-leanpub"></i></a>
+                    <a href="https://www.hackerrank.com/profile/717822i258"><i class="fab fa-hackerrank"></i> </a>
+                </div>
+            </div>
+
+            <!-- Sidebar Buttom Menu -->
+            <div class="sidebar_buttom_menu" id="sidebar_buttom_menu">
+                <i class="fa fa-bars" id="sidebar_menu_icon"></i>
+            </div>
+
+            <!-- Sidebar Navigation -->
+            <ul class="sidebar_navigation" id="sidebar_navigation">
+                <li><a href="index.html"><i class="fa fa-home"></i> About</a></li>
+                <li><a href="resume.html" class="active">Resume</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="Projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+
+        </div>
+        <!-- content -->
+        <div class="content_container">
+            <!-- Resume Page -->
+            <div class="resume_page">
+                <h2 class="title">My<span>Resume</span></h2>
+                <div>
+                <style>
+                    body {
+                        font-family: Arial, sans-serif;
+                        margin: 0;
+                        padding: 0;
+                        color: #333;
+                        background-color: #f4f4f4;
+                    }
+                    header {
+                        background-color: #004d99;
+                        color: #fff;
+                        text-align: center;
+                        padding: 20px;
+                        border-radius: 10px;
+
+                    }
+                    header h1 {
+                        margin: 0;
+                        font-size: 2em;
+                    }
+                    header p {
+                        margin: 5px 0;
+                    }
+                    header a {
+                        color: #ffd700;
+                        text-decoration: none;
+                    }
+                    header a:hover {
+                        text-decoration: underline;
+                    }
+                    .content {
+                        width: 80%;
+                        margin: 20px auto;
+                    }
+                    .section {
+                        background-color: #fff;
+                        border-radius: 8px;
+                        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                        margin-bottom: 20px;
+                        padding: 20px;
+                    }
+                    .section h2 {
+                        border-bottom: 2px solid #004d99;
+                        padding-bottom: 10px;
+                        color: #004d99;
+                    }
+                    .section p {
+                        margin: 10px 0;
+                    }
+                    .section a {
+                        color: #004d99;
+                        text-decoration: none;
+                    }
+                    .section a:hover {
+                        text-decoration: underline;
+                    }
+                    .skill-bar {
+                        background-color: #e0e0e0;
+                        border-radius: 20px;
+                        overflow: hidden;
+                        margin: 10px 0;
+                        height: 30px;
+                        width: 100%;
+                    }
+                    .skill-bar div {
+                        height: 100%;
+                        text-align: center;
+                        color: white;
+                        line-height: 30px;
+                        border-radius: 20px;
+                    }
+                    .skill-java { width: 70%; background-color: #ffeb3b; }
+                    .skill-python { width: 90%; background-color: #4caf50; }
+                    .skill-scikit-learn { width: 80%; background-color: #2196f3; }
+                    .skill-docker { width: 75%; background-color: #ff9800; }
+                    .skill-pandas { width: 85%; background-color: #3f51b5; }
+                    .skill-streamlit { width: 65%; background-color: #00bcd4; }
+                    .skill-sql { width: 80%; background-color: #8bc34a; }
+                    .skill-numpy { width: 80%; background-color: #ff5722; }
+                    .skill-tableau { width: 60%; background-color: #607d8b; }
+                    .skill-vscode { width: 90%; background-color: #03a9f4; }
+                    .skill-jupyter { width: 75%; background-color: #e91e63; }
+                    .skill-eclipse { width: 65%; background-color: #cddc39; }
+                    .description {
+                        font-size: 2rem; /* Adjusted font size */
+                        line-height: 1  ;
+                        margin-bottom: 1rem;
+                        font-weight: bold;
+                        color: #4618ef; /* Default font color */
+                        white-space: nowrap;
+                        overflow: hidden;
+                        border-right: none; /* Removed cursor effect */
+                        animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
+                    }
+            
+                    @keyframes typing {
+                        from { width: 0; }
+                        to { width: 100%; }
+                    }
+                </style>
+                <header>
+                    <h1>Eden Beryl S</h1>
+                    <p>+91 9344349817 | <a href="mailto:edenberyl2004@gmail.com">edenberyl2004@gmail.com</a></p>
+                    <p><a href="https://linkedin.com/in/surya-m-42b130268/">LinkedIn</a> | <a href="https://github.com/SURYAMurugan2211">GitHub</a></p>
+                </header>
+            
+                <section class="content">
+                    <div class="section">
+                        <h2 class="description" id="typing">Education</h2>
+                        <p><strong>Artificial Intelligence and Data Science</strong> (2022 – 2024)<br>
+                        Karpagam College of Engineering, Coimbatore<br>
+                        CGPA: 7.0</p>
+                    </div>
+            
+                    <div class="section">
+                        <h2 class="description" id="typing">Experience</h2>
+                        <p><strong>Gateway Software Solution</strong> (September 2023 – October 2023)<br>
+                        Learner, Online Internship<br>
+                        Worked on a project involving full stack development with basics in HTML, CSS, JavaScript, and PHP.</p>
+                    </div>
+            
+                    <div class="section">
+                        <h2 class="description" id="typing">Certifications</h2>
+                        <p><strong>Data Analytics with Python</strong> (January 2024 – April 2024)<br>
+                        IIT Roorkee | NPTEL<br>
+                        Data analytics converts raw data into actionable insights using machine learning and statistics.</p>
+                    </div>
+            
+                    <div class="section">
+                        <h2 class="description" id="typing">Projects</h2>
+                        <p><strong>Student’s Encyclopedia</strong> | Fundamentals of Web Scripting (May 2023 – July 2023)<br>
+                        Visualizes the evolution of species with information aimed at students under grade 10.</p>
+            
+                        <p><strong>Electricity Bill Prediction For Industry</strong> | Machine Learning (February 2024 – March 2024)<br>
+                        Predicts electricity usage for industries to manage budgets effectively. Technologies used: VS Code, Python, Docker, Django, Node.js, Streamlit, GitHub.</p>
+            
+                        <p><strong>Finding Body Measurements</strong> | OpenCV and Matplotlib (April 2024 – May 2024)<br>
+                        Facilitates personalized services in fashion and apparel by offering custom-fit recommendations based on body dimensions.</p>
+                    </div>
+            
+                    <div class="section">
+                        <h2 class="description" id="typing">Technical Skills</h2>
+                        <div class="skill-bar"><div class="skill-python">Python (90%)</div></div>
+                        <div class="skill-bar"><div class="skill-scikit-learn">Scikit-Learn (80%)</div></div>
+                        <div class="skill-bar"><div class="skill-docker">Docker (55%)</div></div>
+                        <div class="skill-bar"><div class="skill-pandas">Pandas (85%)</div></div>
+                        <div class="skill-bar"><div class="skill-streamlit">Streamlit (50%)</div></div>
+                        <div class="skill-bar"><div class="skill-sql">SQL (65%)</div></div>
+                        <div class="skill-bar"><div class="skill-numpy">Numpy (80%)</div></div>
+                        <div class="skill-bar"><div class="skill-tableau">Tableau (60%)</div></div>
+                        <div class="skill-bar"><div class="skill-vscode">VS Code (90%)</div></div>
+                        <div class="skill-bar"><div class="skill-jupyter">Jupyter Notebooks (75%)</div></div>
+                        <div class="skill-bar"><div class="skill-java">Java (50%)</div></div>
+                        <div class="skill-bar"><div class="skill-eclipse">Eclipse (67%)</div></div>
+                    </div>
+            
+                    <div class="section">
+                        <h2 class="description" id="typing">Soft Skills</h2>
+                        <p>Problem Solving, Critical Thinking, Teamwork, Communication, Collaboration, Leadership</p>
+                    </div>
+                </section>
+            </div>     
+            </div>
+        </div>
+    </div>
+
+
+    <script src="{% static 'about/js/script.js' %}"></script>
+</body>
+
+</html>

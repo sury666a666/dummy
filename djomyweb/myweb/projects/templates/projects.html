@@ -1,0 +1,158 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS file -->
+    <link rel="stylesheet" href="{% static 'about/css/style.css' %}">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'about/images/eden.jpg' %}" type="image/x-icon">
+
+    <!-- Fontawesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Eden Beryl S</title>
+</head>
+
+<body>
+    <!-- Website Layout -->
+    <div class="website_container">
+
+        <!-- Global Menu -->
+        <div id="global_menu_button_container">
+            <p class="site_title">Eden Beryl S</p>
+            <i class="fa fa-bars" id="global_menu_button"></i>
+        </div>
+
+        <ul id="global_menu_items">
+            <div>
+                <i class="fa fa-close" id="global_menu_close_button"></i>
+                <li><a href="/"><i class="fa fa-home"></i> About</a></li>
+                <li><a href="resume.html"><i class="fas fa-file-alt"></i> Resume</a></li>
+                <li><a href="blogs.html"><i class="fas fa-pen-nib"></i> Blogs</a></li>
+                <li><a href="Projects.html"><i class="fas fa-cog"></i> Projects</a></li>
+                <li><a href="contact.html"><i class="fas fa-phone-square"></i> Contact</a></li>
+            </div>
+        </ul>
+
+        <!--x Global Menu x-->
+
+        <!-- sidebar -->
+        <div class="sidebar_container"> 
+            <div class="image">
+                <img src="{% static 'about/images/eden.jpg' %}" alt="Surya">
+                <div class="right_image_box"></div>
+                <div class="left_image_box"></div>
+            </div>
+            <!-- sidebar Content -->
+            <div class="sidebar_content">
+                <!-- Long name can be applied so easily -->
+                <h1>Eden Beryl S</h1>
+                <p>Big Data Engineer</p>
+                <!-- Social Medias -->
+                <div class="social_media">
+                    <a href="https://github.com/SURYAMurugan2211"><i class="fab fa-github"></i></a>
+                    <a href="https://leetcode.com/u/Surya-M" ><i class="fab fa-leanpub"></i></a>
+                    <a href="https://www.hackerrank.com/profile/717822i258"><i class="fab fa-hackerrank"></i> </a>
+                </div>
+            </div>
+
+            <!-- Sidebar Buttom Menu -->
+            <div class="sidebar_buttom_menu" id="sidebar_buttom_menu">
+                <i class="fa fa-bars" id="sidebar_menu_icon"></i>
+            </div>
+
+            <!-- Sidebar Navigation -->
+            <ul class="sidebar_navigation" id="sidebar_navigation">
+                <li><a href="index.html"><i class="fa fa-home"></i> About</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="Projects.html" class="active">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+
+        </div>
+        <div class="content_container">
+            <div class="services_page">
+                <h2 class="title">My <span>Projects</span></h2>
+                    <style>
+                        body{
+                            background-color: #F5F5F5;
+                            color: #333333;
+                            font-family: 'Arial', sans-serif;
+                            margin: 0;
+                        }
+                        .container {
+                            padding: 20px;
+                            margin-top: 1.2rem;
+                            border: 0.1rem solid #1E90FF;
+                            border-radius: 0.4rem;
+                            background-color: #F5F5F5;
+                        }
+                        .project {
+                            display: flex;
+                            align-items: flex-start;
+                            margin-bottom: 40px;
+                            padding-bottom: 20px;
+                            border-bottom: 2px solid #1E90FF;
+                        }
+                        .project img {
+                            max-width: 30%;
+                            margin-right: 20px;
+                            border-radius: 0.4rem;
+                            object-fit: cover;
+                        }
+                        .project-content {
+                            max-width: 70%;
+                        }
+                        .project h1 {
+                            color: #1E90FF;
+                            font-size: 36px;
+                            text-align: center;
+                            margin-bottom: 20px;
+                        }
+                        .project p {
+                            font-size: 18px;
+                            line-height: 1.6;
+                        }
+                    </style>
+                    <div>
+                    <div class="container">
+                        <div class="project">
+                            <img src="{% static 'about/images/proj5.jpg' %}" alt="Electricity Bill Prediction Image" height="500px">
+                            <div class="project-content">
+                                <h1>Electricity Bill Prediction For Industry</h1>
+                                <p><strong>Description:</strong> This project aims to assist industries in predicting their electricity consumption based on historical data and usage patterns. By leveraging machine learning models, it forecasts future energy needs, allowing businesses to plan and manage their budgets more effectively.</p>
+                                <p><strong>Technologies Used:</strong> VS Code, Python, Docker, Django, Node.js, Streamlit, GitHub</p>
+                                <p><strong>Key Features:</strong> The system offers detailed analytics on energy consumption trends, potential cost-saving measures, and alerts for unusual spikes in usage. It also provides a user-friendly interface through Streamlit for easy access to predictions and reports.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="project">
+                            <img src="{% static 'about/images/proj2.jpg' %}" alt="Body Measurements Project Image">
+                            <div class="project-content">
+                                <h1>Body Measurements</h1>
+                                <p><strong>Description:</strong> This project uses computer vision and imaging libraries to accurately measure body dimensions, which is crucial for personalized services in industries such as fashion and apparel. By analyzing images, it provides detailed measurements that can be used to recommend the best-fitting clothing or tailor-made options.</p>
+                                <p><strong>Technologies Used:</strong> VS Code, Computer Vision, Imaging libraries</p>
+                                <p><strong>Key Features:</strong> The system supports multiple measurement methods, including 2D and 3D imaging, and provides a comprehensive set of measurements such as height, waist, chest, and more. It is designed to be user-friendly, allowing individuals to easily upload images and receive their measurements.</p>
+                            </div> 
+                            </div>
+                        </div>
+                    </div>
+       </div>   
+        </div>
+    </div>
+
+
+    <script src="{% static 'about/js/script.js' %}"></script>
+</body>
+
+</html>

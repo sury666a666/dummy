@@ -1,0 +1,164 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS file -->
+    <link rel="stylesheet" href="{% static 'about/css/style.css' %}">
+
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'about/images/myphoto.jpg' %}" type="image/x-icon">
+
+    <!-- Fontawesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Eden Beryl S</title>
+</head>
+
+<body>
+    <!-- Website Layout -->
+    <ul class="website_container">
+
+        <!-- Global Menu -->
+        <div id="global_menu_button_container">
+            <p class="site_title">Eden Beryl S</p>
+            <i class="fa fa-bars" id="global_menu_button"></i>
+        </div>
+
+        <ul id="global_menu_items">
+            <div>
+                <i class="fa fa-close" id="global_menu_close_button"></i>
+                <li><a href="/index.html"><i class="fa fa-home"></i> About</a></li>
+                <li><a href="resume.html"><i class="fas fa-file-alt"></i> Resume</a></li>
+                <li><a href="blogs.html"><i class="fas fa-pen-nib"></i> Blogs</a></li>
+                <li><a href="Projects.html"><i class="fas fa-cog"></i> Projects</a></li>
+                <li><a href="contact.html"><i class="fas fa-phone-square"></i>Contact</a></li>
+            </div>
+        </ul>
+        <div class="sidebar_container">
+            <div class="image">
+                <img src="{% static 'about/images/eden.jpg' %}" alt="Surya">
+                <div class="right_image_box"></div>
+                <div class="left_image_box"></div>
+            </div>
+
+            <div class="sidebar_content">   
+                <!-- Long name can be applied so easily -->
+                <h1>Eden Beryl S</h1>
+                <p>Big Data Engineer</p>
+                <!-- Social Medias -->
+                <div class="social_media">
+                    <a href="https://github.com/SURYAMurugan2211"><i class="fab fa-github"></i></a>
+                    <a href="https://leetcode.com/u/Surya-M" ><i class="fab fa-leanpub"></i></a>
+                    <a href="https://www.hackerrank.com/profile/717822i258"><i class="fab fa-hackerrank"></i> </a>
+                </div>
+            </div>
+
+            <!-- Sidebar Buttom Menu -->
+            <div class="sidebar_buttom_menu" id="sidebar_buttom_menu">
+                <i class="fa fa-bars" id="sidebar_menu_icon"></i>
+            </div>
+
+            <!-- Sidebar Navigation -->
+            <ul class="sidebar_navigation" id="sidebar_navigation">
+                <li><a href="/" class="active">About</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="Projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+
+        </div>
+
+        <div class="content_container">
+            <!-- About Page -->
+            <div class="about_page">
+                <h2 class="title">About <span>Me</span></h2>
+                    <style>
+
+                        .full{
+                            font-family:"font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;";
+                            color: #0f0808; /* Default font color */
+                            margin: 0;
+                            padding: 0;
+                            font-size: larger;
+                            margin-top: 1.2rem;
+                          border: 0.1rem solid var(--brand-color);
+                          padding: 0.5rem;
+                          border-radius: 0.4rem;
+                            }
+                
+                        #about-me {
+                            padding: 1rem;
+                            text-align: center;
+                        }
+                
+                        .content {
+                            max-width: 1000px;
+                            padding: 2rem;}
+                
+                        .description {
+                            font-size: 4rem; /* Adjusted font size */
+                            line-height: 1  ;
+                            margin-bottom: 1rem;
+                            font-weight: bold;
+                            color: #2fe5eb; /* Default font color */
+                            white-space: nowrap;
+                            overflow: hidden;
+                            border-right: none; /* Removed cursor effect */
+                            animation: typing 4s steps(40, end), blink-caret .75s step-end infinite;
+                        }
+                
+                        @keyframes typing {
+                            from { width: 0; }
+                            to { width: 100%; }
+                        }
+                        
+                     
+                
+                        /* Additional content styling */
+                        .additional-content {
+                            text-align: left; /* Align content to the left */
+                            color: #1b1919; /* Adjust text color */
+                            padding: 1rem;
+                        }
+                
+                        /* Container size */
+                    </style>
+                <div class="full">
+                    <!-- About Me Section -->
+                    <section id="about-me">
+                        <div class="content container">
+                            <p class="description" id="typewriter"  style="font-family: 'bradley hand',cursive;">Welcome to My Website</p>
+                            <div class="additional-content">
+                                <p style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size:2.4cap;";>
+                                I am Pursuing a B.Tech in Artificial Intelligence and Data Science at Karpagam College of Engineering, 
+                                I've developed strong skills in Python,Big data, and AI fundamentals. My passion lies in exploring 
+                                AI's real-world applications. Outside of academics, I enjoy playing cricket, blending teamwork with strategic
+                                 thinking. I'm always eager to collaborate on projects and explore innovative ideas.</p></div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                
+                
+
+            </div> 
+        </div>
+
+
+        <script src="{% static 'about/js/script.js' %}"></script>
+</body>
+
+</html>
+ 

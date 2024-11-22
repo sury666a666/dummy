@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library Management System</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; color: #333; margin: 0; padding: 0; }
+        h1 { text-align: center; color: #2c3e50; }
+        .container { width: 80%; margin: 0 auto; padding: 20px; }
+        form { margin: 20px 0; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+        input, button { padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 4px; }
+        button { background-color: #3498db; color: #fff; border: none; cursor: pointer; }
+        button:hover { background-color: #2980b9; }
+        ul { list-style-type: none; padding: 0; }
+        li { padding: 10px; background: #fff; margin-bottom: 10px; border-radius: 4px; }
+        .actions a { margin: 0 10px; text-decoration: none; color: #3498db; }
+        .actions a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Library Management System</h1>
+        
+        <h2>Search Books</h2>
+        <form method="GET" action="{% url 'search_books' %}">
+            <input type="text" name="query" placeholder="Search for books..." />
+            <button type="submit">Search</button>
+        </form>
+
+        <h2>Books</h2>
+        <ul>
+            {% for book in books %}
+                <li>
+                    {{ book.title }} by {{ book.author }} (Added on {{ book.date_added }})
+                    <span class="actions">
+                        <a href="{% url 'edit_book' book.pk %}">Edit</a>
+                        <a href="{% url 'delete_book' book.pk %}">Delete</a>
+                    </span>
+                </li>
+            {% empty %}
+                <li>No books available.</li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'add_book' %}">Add New Book</a>
+
+        <h2>Members</h2>
+        <ul>
+            {% for member in members %}
+                <li>{{ member.name }} (Registered on {{ member.date_registered }})</li>
+            {% empty %}
+                <li>No members registered.</li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'add_member' %}">Add New Member</a>
+    </div>
+</body>
+</html>

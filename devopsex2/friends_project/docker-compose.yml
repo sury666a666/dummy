@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+
+  mongo-express:
+    image: mongo-express
+    ports:
+      - "5000:8081"
+    environment:
+      - ME_CONFIG_MONGODB_SERVER=mongo
